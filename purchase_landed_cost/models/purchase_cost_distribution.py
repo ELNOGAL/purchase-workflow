@@ -90,9 +90,7 @@ class PurchaseCostDistribution(models.Model):
     )
     date = fields.Date(
         required=True,
-        readonly=True,
         index=True,
-        states={"draft": [("readonly", False)]},
         default=fields.Date.context_today,
     )
     total_uom_qty = fields.Float(
