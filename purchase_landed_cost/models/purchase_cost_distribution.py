@@ -92,7 +92,6 @@ class PurchaseCostDistribution(models.Model):
         required=True,
         readonly=True,
         index=True,
-        states={"draft": [("readonly", False)]},
         default=fields.Date.context_today,
     )
     total_uom_qty = fields.Float(
@@ -354,7 +353,7 @@ class PurchaseCostDistributionLine(models.Model):
     def _compute_standard_price_old(self):
         for dist_line in self:
             dist_line.standard_price_old = (
-                dist_line.move_id and dist_line.move_id._get_price_unit() or 0.0
+                next(iter(dist_line.move_id._get_price_unit().values()))
             )
 
     name = fields.Char(compute="_compute_name", store=True)
