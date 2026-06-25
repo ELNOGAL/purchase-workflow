@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-02-11 13:34+0000\n"
-"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"PO-Revision-Date: 2026-04-19 09:31+0000\n"
+"Last-Translator: Ed-Spain <eduamoros@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: purchase_tag
 #: model:ir.model.fields,field_description:purchase_tag.field_purchase_tag__child_ids
@@ -45,6 +45,16 @@ msgstr "Creado el"
 #: model:ir.model.fields,field_description:purchase_tag.field_purchase_tag__display_name
 msgid "Display Name"
 msgstr "Mostrar Nombre"
+
+#. module: purchase_tag
+#: model_terms:ir.ui.view,arch_db:purchase_tag.view_purchase_order_filter
+msgid "Don't have a tag"
+msgstr "Sin etiqueta"
+
+#. module: purchase_tag
+#: model_terms:ir.ui.view,arch_db:purchase_tag.view_purchase_order_filter
+msgid "Have a tag"
+msgstr "Con etiqueta"
 
 #. module: purchase_tag
 #: model:ir.model.fields,field_description:purchase_tag.field_purchase_tag__id
@@ -82,6 +92,11 @@ msgid "Purchase Tag"
 msgstr "Etiqueta de compra"
 
 #. module: purchase_tag
+#: model_terms:ir.ui.view,arch_db:purchase_tag.view_purchase_order_filter
+msgid "Tag"
+msgstr "Etiqueta"
+
+#. module: purchase_tag
 #: model:ir.model.fields,field_description:purchase_tag.field_purchase_tag__name
 msgid "Tag Name"
 msgstr "Nombre de etiqueta"
@@ -99,12 +114,9 @@ msgstr "¡El nombre de etiqueta ya existe!"
 msgid "Tags"
 msgstr "Etiquetas"
 
-#. module: purchase_tag
-#. odoo-python
-#: code:addons/purchase_tag/models/purchase_tag.py:0
 #, python-format
-msgid "Tags cannot be recursive."
-msgstr "Las etiquetas no pueden ser recursivas."
+#~ msgid "Tags cannot be recursive."
+#~ msgstr "Las etiquetas no pueden ser recursivas."
 
 #~ msgid "Last Modified on"
 #~ msgstr "Última Modificación el"
